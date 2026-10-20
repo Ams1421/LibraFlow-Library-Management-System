@@ -1,4 +1,3 @@
-
 import { useCallback, useEffect, useState } from "react";
 import {
   Activity,
@@ -141,7 +140,11 @@ export default function Transactions() {
       {error && (
         <div className="transactions-alert" role="alert">
           {error}
-          <button type="button" onClick={() => setError("")} aria-label="Dismiss">
+          <button
+            type="button"
+            onClick={() => setError("")}
+            aria-label="Dismiss"
+          >
             ×
           </button>
         </div>

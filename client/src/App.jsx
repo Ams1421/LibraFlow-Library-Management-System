@@ -4,7 +4,6 @@ import {
   ArrowDownRight,
   ArrowRight,
   ArrowUpRight,
-  Bell,
   BookOpen,
   BookPlus,
   CalendarDays,
@@ -12,7 +11,6 @@ import {
   ChevronDown,
   Clock3,
   LayoutDashboard,
-  LibraryBig,
   Menu,
   Plus,
   RefreshCw,
@@ -23,6 +21,7 @@ import {
   X,
 } from "lucide-react";
 import "./App.css";
+import libraFlowLogo from "./assets/logo.png";
 import Books from "./pages/Books";
 import Members from "./pages/Members";
 import IssueReturn from "./pages/IssueReturn";
@@ -154,8 +153,12 @@ function App() {
 
       <aside className={`sidebar ${mobileMenuOpen ? "sidebar-open" : ""}`}>
         <div className="brand">
-          <div className="brand-icon">
-            <LibraryBig size={25} />
+          <div className="brand-icon-custom-lf" aria-label="LibraFlow logo">
+            <img
+              src={libraFlowLogo}
+              alt="LibraFlow book and LF emblem"
+              className="brand-logo-image"
+            />
           </div>
           <div className="brand-copy">
             <strong>
@@ -248,7 +251,7 @@ function App() {
               title="Refresh dashboard data"
               onClick={loadDashboard}
             >
-              <Bell size={19} />
+              <RefreshCw size={18} />
             </button>
             <div className="topbar-avatar">LB</div>
           </div>

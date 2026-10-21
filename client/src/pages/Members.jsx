@@ -15,7 +15,7 @@ import {
 } from 'lucide-react'
 import './Members.css'
 
-const API_URL = 'http://localhost:5000/api/members'
+const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:5000/api"}/members`;
 const PAGE_SIZE = 10
 
 const emptyForm = {

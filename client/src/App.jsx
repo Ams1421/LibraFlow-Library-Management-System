@@ -28,7 +28,7 @@ import IssueReturn from "./pages/IssueReturn";
 import Transactions from "./pages/Transactions";
 import Settings from "./pages/Settings";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const navigation = [
   { label: "Dashboard", icon: LayoutDashboard },

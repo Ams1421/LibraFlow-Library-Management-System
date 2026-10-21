@@ -12,7 +12,8 @@ import {
 } from "lucide-react";
 import "./Settings.css";
 
-const HEALTH_URL = "http://localhost:5000/api/health";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const HEALTH_URL = `${API_BASE_URL}/health`;
 
 export default function Settings() {
   const [health, setHealth] = useState("checking");

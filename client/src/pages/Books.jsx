@@ -13,7 +13,7 @@ import {
 import "../App.css";
 import "./Books.css";
 
-const API_URL = "http://localhost:5000/api/books";
+const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:5000/api"}/books`;
 const PAGE_SIZE = 10;
 
 const emptyForm = {
